@@ -36,7 +36,7 @@ python_cmd() {
                 if [ "$distribution_major_version" -ge "8" ]; then
                     PYTHON_CMD=python3
                 elif [ "$distribution_major_version" -eq "7" ]; then
-                    release_val=$(cat /etc/centos-release | awk '{print $4 }' | grep '^7.8\|^7.9')
+                    release_val=$(cat /etc/centos-release | awk '{print $4 }' | grep '^7.7\|^7.8\|^7.9')
                     python_val=$(rpm -q python3)
                     if [ ! -z $release_val ] && [[ $python_val =~ "python3-" ]]; then
                         # declare centos7 python3 variable:
